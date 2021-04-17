@@ -16,7 +16,7 @@ export default () => {
 
     if (loading) {
         return (
-            <CircularProgress />
+            <CircularProgress style={{ alignSelf: 'center' }} />
         )
     }
 
@@ -33,6 +33,5 @@ const useStyles = makeStyles({
         display: 'flex',
         justifyContent: 'space-around',
         width: '100%',
-    },
-
+    }
 })

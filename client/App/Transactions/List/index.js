@@ -3,17 +3,18 @@ import React from 'react';
 
 export default ({ transactions, title }) => {
     const classes = useStyles();
-    console.log({ transactions });
 
     return (
         <Box className={classes.container}>
             <Typography variant='h5'>{title}</Typography>
-            {transactions.map(x => (
-                <Box key={`${x.counterparty}${x.amount}`} className={classes.transaction}>
-                    <Typography>{x.counterparty}</Typography>
-                    <Typography>{`${Math.abs(x.amount)}$`}</Typography>
-                </Box>
-            ))}
+            <Box className={classes.list}>
+                {transactions.map(x => (
+                    <Box key={`${x.counterparty}${x.amount}`} className={classes.transaction}>
+                        <Typography>{x.counterparty}</Typography>
+                        <Typography>{`${Math.abs(x.amount)}$`}</Typography>
+                    </Box>
+                ))}
+            </Box>
         </Box>
     )
 }
@@ -24,6 +25,13 @@ const useStyles = makeStyles({
         alignItems: 'center',
         flexDirection: 'column',
         width: '300px',
+
+    },
+    list: {
+        height: '200px',
+        overflowY: 'auto',
+        overflowX: 'hidden',
+        width: '100%'
     },
     transaction: {
         display: 'flex',

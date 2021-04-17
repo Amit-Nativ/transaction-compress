@@ -15,3 +15,11 @@ export const groupAmountByParty = (transactions) => {
         return acc;
     }, {})
 }
+
+export const add = (transactions, counterparty, amount) => {
+    return [...transactions, {
+        tradingParty: 'me',
+        counterparty: counterparty,
+        amount: amount
+    }]
+}
