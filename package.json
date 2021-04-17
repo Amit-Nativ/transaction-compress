@@ -1,0 +1,27 @@
+{
+  "name": "express-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d dist",
+    "serve": "node dist/app.js",
+    "dev": "nodemon src/app.js --exec babel-node"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.14",
+    "@babel/node": "^7.13.13",
+    "@babel/preset-env": "^7.13.12"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "dotenv": "^8.2.0",
+    "error-middleware": "^5.2.0",
+    "express": "^4.17.1",
+    "express-async-router": "^0.1.15",
+    "express-validator": "^6.10.0",
+    "helmet": "^4.4.1",
+    "winston": "^3.3.3"
+  }
+}
