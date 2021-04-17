@@ -8,13 +8,19 @@ export default ({ open, handleClose }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const counterparty = e.target['counterparty'].value;
-        const amount = e.target['amount'].value;
+        try {
+            const counterparty = e.target['counterparty'].value;
+            const amount = e.target['amount'].value;
 
-        await post('/api/transactions', { amount, counterparty });
+            await post('/api/transactions', { amount, counterparty });
 
-        alert('Transaction was successfully added!');
-        location.reload();
+            alert('Transaction was successfully added!');
+        } catch (e) {
+            alert('An Error Occured');
+            console.log(e);
+        } finally {
+            location.reload();
+        }
     }
 
     return (

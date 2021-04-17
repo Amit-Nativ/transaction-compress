@@ -5,10 +5,20 @@ import downloadFile from 'js-file-download'
 
 export default () => {
     const compress = async () => {
-        const { data } = await axios.put('/api/transactions/compress');
+        try {
+            const { data } = await axios.put('/api/transactions/compress');
 
+            download(data);
+        } catch (e) {
+            alert('An Error Occured');
+            console.log(e);
+        } finally {
+            location.reload();
+        }
+    }
+
+    const download = async (data) => {
         downloadFile(data, 'compressed.csv')
-        location.reload();
     }
 
     return (

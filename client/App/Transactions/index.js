@@ -10,7 +10,7 @@ export default () => {
 
     if (error) {
         return (
-            <Box>{"התרחשה תקלה"}</Box>
+            <Box>{"An Error Occured"}</Box>
         )
     }
 

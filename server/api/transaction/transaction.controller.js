@@ -1,4 +1,3 @@
-import { BadRequestError } from 'error-middleware/errors'
 import toCsv from 'objects-to-csv'
 
 import { read, write } from '../../config/json'

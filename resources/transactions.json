@@ -1,1 +1,17 @@
-[{"tradingParty":"me","counterparty":"you","amount":1000},{"tradingParty":"me","counterparty":"someone_else","amount":100},{"tradingParty":"me","counterparty":"amit","amount":"000100"},{"tradingParty":"me","counterparty":"dani","amount":"0005"},{"tradingParty":"me","counterparty":"wkoqfko","amount":"000888"},{"tradingParty":"me","counterparty":"qwfjhk","amount":"000989"}]
+[
+    {
+        "tradingParty": "me",
+        "counterparty": "you",
+        "amount": -400
+    },
+    {
+        "tradingParty": "me",
+        "counterparty": "you",
+        "amount": 500
+    },
+    {
+        "tradingParty": "me",
+        "counterparty": "someone_else",
+        "amount": 100
+    }
+]
