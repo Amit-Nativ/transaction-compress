@@ -1,11 +1,13 @@
+import React from 'react';
 import { Button } from '@material-ui/core';
 import axios from 'axios';
-import React from 'react';
+import downloadFile from 'js-file-download'
 
 export default () => {
     const compress = async () => {
         const { data } = await axios.put('/api/transactions/compress');
-        console.log({ data });
+
+        downloadFile(data, 'compressed.csv')
         location.reload();
     }
 

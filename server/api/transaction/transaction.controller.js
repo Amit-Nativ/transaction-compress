@@ -1,4 +1,5 @@
 import { BadRequestError } from 'error-middleware/errors'
+import toCsv from 'objects-to-csv'
 
 import { read, write } from '../../config/json'
 import { add, groupAmountByParty, groupByMethod } from './transaction.utils';
@@ -27,5 +28,5 @@ export const compressTransactions = async (req, res) => {
     }))
 
     await write(formatted);
-    res.sendStatus(200);
+    return new toCsv(formatted).toString();
 }
