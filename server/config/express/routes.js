@@ -1,9 +1,9 @@
 import { AsyncRouter } from 'express-async-router'
 
-import modelRouter from '../../api/model'
+import transactionRouter from '../../api/transaction'
 
 const router = AsyncRouter();
 
-router.use('/model', modelRouter);
+router.use('/transactions', transactionRouter);
 
 export default router;
